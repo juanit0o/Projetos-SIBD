@@ -1,0 +1,107 @@
+BEGIN pkg_liga.regista_clube('ABC','AAAAAAAAAABC','Braga'); END;
+/
+SELECT * FROM CLUBE;
+
+BEGIN pkg_liga.regista_clube('BAC','GALOFODIFFDSFG','GALEIROS'); END;
+/
+SELECT * FROM CLUBE;
+-----------------------------------------
+-----------------------------------------
+BEGIN pkg_liga.regista_jogadora(1,'Jogadora um', 1975, 'ABC'); END;
+/
+SELECT * FROM JOGADORA;
+
+BEGIN pkg_liga.regista_jogadora(2,'Jogadora DOIS', 1981, 'BAC'); END;
+/
+SELECT * FROM JOGADORA;
+-----------------------------------------
+-----------------------------------------
+BEGIN pkg_liga.regista_jogo('ABC','FCP', 4, 5600); END;
+/
+SELECT * FROM JOGO;
+
+BEGIN pkg_liga.regista_jogo('BAC','SLB', 4, 500); END;
+/
+SELECT * FROM JOGO;
+-----------------------------------------
+-----------------------------------------
+BEGIN pkg_liga.regista_participacao(1, 4, 2); END;
+/
+SELECT * FROM PARTICIPA;
+
+BEGIN pkg_liga.regista_participacao(2, 4, 0); END;
+/
+SELECT * FROM PARTICIPA;
+-----------------------------------------
+-----------------------------------------
+BEGIN pkg_liga.remove_participacao(1, 4); END;
+/
+SELECT * FROM PARTICIPA;
+
+BEGIN pkg_liga.remove_participacao(2, 4); END;
+/
+SELECT * FROM PARTICIPA;
+-----------------------------------------
+-----------------------------------------
+BEGIN pkg_liga.regista_participacao(1, 4, 2); END;
+/
+SELECT * FROM PARTICIPA;
+
+BEGIN pkg_liga.regista_participacao(2, 4, 0); END;
+/
+SELECT * FROM PARTICIPA;
+
+BEGIN pkg_liga.remove_jogo('ABC','FCP'); END;
+/
+SELECT * FROM JOGO;
+SELECT * FROM PARTICIPA;
+
+BEGIN pkg_liga.remove_jogo('BAC','SLB'); END;
+/
+SELECT * FROM JOGO;
+SELECT * FROM PARTICIPA;
+-----------------------------------------
+-----------------------------------------
+BEGIN pkg_liga.regista_participacao(1, 4, 2); END;
+/
+
+BEGIN pkg_liga.remove_jogadora(1); END;
+/
+SELECT * FROM JOGADORA;
+SELECT * FROM PARTICIPA;
+-----------------------------------------
+-----------------------------------------
+BEGIN pkg_liga.regista_jogo('BAC','SLB', 4, 500); END;
+/
+
+BEGIN pkg_liga.remove_clube('BAC'); END;
+/
+SELECT * FROM JOGADORA;
+SELECT * FROM PARTICIPA;
+SELECT * FROM CLUBE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
